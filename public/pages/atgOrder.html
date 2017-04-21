@@ -1,0 +1,90 @@
+<div id="wrapper">
+    <div data-ng-include="'/pages/Menu.html'"></div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <h3 class="text-center viewHeader">
+                <i class="fa fa-tags"></i>
+               E-Commerce Order Fullfillment Statistics 
+                <i class="fa fa-tags"></i>
+            </h3>
+			<br \>
+            <div id="ticker">
+            <p align='center' class="textMIBackground" style="background-color: rgba(158, 157, 160, 0.38);margin:9px">
+                <b>B&Q UK</b>
+            </P>
+            <div class="replenishments row alert-primary">
+                <div  class="col-xs-3  col-sm-3" style="font-size: 12px !important;"><b>Order Status</b></div>
+                
+                <div class="col-xs-3 col-sm-3" style="font-size: 12px !important;"><b>Order Description</b></div>
+                <div  class="col-xs-3 col-sm-3" style="font-size: 12px !important;"> <b>Count From </b><br><font style="font-weight: bold;font-size: 10px !important; color: #B32305;"> {{yesterday | date:'dd-MMM-yyyy@hh a'}}<br>To<br>{{CurrentDate | date:'dd-MMM-yyyy@hh a'}}</font> </div>
+                <div  class="col-xs-3 col-sm-3" style="font-size: 12px !important;"><b>Count From </b><br><font style="font-weight: bold;font-size: 10px !important; color: #B32305;">{{yestOneHourPage | date:'dd-MMM-yyyy@hh a'}}<br>To<br>{{todayHourPage | date:'dd-MMM-yyyy@hh a'}}</font></div>
+            </div>
+            
+
+            <div class="replenishmentContainer" >
+                <div class="replenishments" data-ng-repeat="transaction in transactionDetailsListATG">
+
+                    <div class="row">
+                        <div  class="col-xs-3  col-sm-3" style="font-size: 12px !important; color: #EF7840;">
+                                <b>{{transaction.orderStatus}}</b>
+                        </div>
+                        <div class="col-xs-3  col-sm-3" style="font-size: 12px !important; color: #EF7840;">
+                            <b>{{transaction.orderDesc}}</b></div>
+                        <div class="col-xs-3  col-sm-3" style="font-size: 12px !important; color: #EF7840;">
+                            <b>{{transaction.currentCount}}</b>
+                        </div>
+                        
+                        <div class="col-xs-3  col-sm-3" style="font-size: 12px !important; color: #EF7840;">
+                            <b> {{transaction.lastHourCount}} </b>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+
+
+<!-- CE -->
+
+<br \>
+            <p align='center' class="textMIBackground" style="background-color: rgba(158, 157, 160, 0.38);margin:9px">
+                <b>CASTRO FR</b>
+            </P>
+            <div class="replenishments row alert-primary">
+                <div class="col-xs-3  col-sm-3" style="font-size: 12px !important;"><b>Order Status</b></div>
+                
+                <div class="col-xs-3  col-sm-3" style="font-size: 12px !important;"><b>Order Description</b></div>
+                <div class="col-xs-3  col-sm-3" style="font-size: 12px !important;"> <b>Count From </b><br><font style="font-weight: bold;font-size: 10px !important; color: #B32305;"> {{yesterday | date:'dd-MMM-yyyy@hh a'}}<br>To<br>{{CurrentDate | date:'dd-MMM-yyyy@hh a'}}</font> </div>
+                <div class="col-xs-3  col-sm-3" style="font-size: 12px !important;"><b>Count From </b><br><font style="font-weight: bold;font-size: 10px !important; color: #B32305;">{{yestOneHourPage | date:'dd-MMM-yyyy@hh a'}} <br>To <br>{{todayHourPage | date:'dd-MMM-yyyy@hh a'}}</font></div>
+            </div>
+            
+
+            <div class="replenishmentContainer" >
+                <div class="replenishments" data-ng-repeat="transactionFR in transactionDetailsListATGFR">
+
+                    <div class="row">
+                        <div class="col-xs-3  col-sm-3" style="font-size: 12px !important; color: #EF7840;">
+                                <b>{{transactionFR.orderStatus}}</b>
+                        </div>
+                        <div class="col-xs-3  col-sm-3" style="font-size: 12px !important; color: #EF7840;">
+                            <b>{{transactionFR.orderDesc}}</b></div>
+                        <div class="col-xs-3  col-sm-3" style="font-size: 12px !important; color: #EF7840;">
+                            <b>{{transactionFR.currentCount}}</b>
+                        </div>
+                        
+                        <div class="col-xs-3  col-sm-3" style="font-size: 12px !important; color: #EF7840;">
+                            <b> {{transactionFR.lastHourCount}} </b>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+</div>
+
+
+
+
+        <div data-ng-include="'/pages/Footer.html'"></div>
+    </div>
+</div>
+</div>

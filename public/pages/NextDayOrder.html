@@ -1,0 +1,178 @@
+<div id="wrapper">
+    <div data-ng-include="'/pages/Menu.html'"></div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid" >
+            <h3 class="text-center viewHeader">
+                <i class="fa fa-tags"></i>
+                Next Day Order
+                <i class="fa fa-tags"></i>
+            </h3>         
+            
+            <div class="replenishmentContainer" >
+               <table border="1" class="mainTable">
+					<tr >
+						<td width="20%" height="90%">
+							<div class="main" id="soinATG"> 
+							  <div class="main_app">
+									<div class="label_app">SO in ATG</div>
+							  </div>
+							  <div class="main_value"> 
+									<div class="label_value">{{nextDayOrderStats.numberOfATGSO}}</div>
+							  </div>
+							</div>
+						</td>
+						<td width="20%" height="90%">
+							<div class="main" id="soinSAP"> 
+							  <div class="main_app">
+									<div class="label_app">SO in SAP</div>
+							  </div>
+							  <div class="main_value"> 
+									<div class="label_value">{{nextDayOrderStats.numberOfSAPSO}}</div>
+							  </div>
+							</div>
+						</td>
+						<td width="20%" height="90%">
+							<div class="main"> 
+							 <div class="main_app">
+									<div class="label_app">PO in SAP</div>
+							  </div>
+							  <div class="main_value"> 
+									<div class="label_value">{{nextDayOrderStats.numberOfSAPPO}}</div>
+							  </div>
+							</div>
+						</td>
+						<td width="20%" height="90%">
+							<div class="main"> 
+							 <div class="main_app">
+									<div class="label_app">PO in WMB/DP</div>
+							  </div>
+							  <div class="main_value"> 
+									<div class="label_value">{{nextDayOrderStats.numberOfMWPO}}</div>
+							  </div>
+							</div>
+						</td>  
+						 <td width="20%" height="90%">
+							<div class="main"> 
+							  <div class="main_app">
+									<div class="label_app">PO in Screwfix</div>
+							  </div>
+							  <div class="main_value"> 
+									<div class="label_value">{{nextDayOrderStats.numberOfScrewfixPO}}</div>
+							  </div>
+							</div>
+						</td>  
+					</tr>
+				</table>
+            </div>            
+        </div>
+       <!-- <div data-ng-include="'/pages/Footer.html'"></div> -->
+    </div>
+</div>
+<head>
+<style>
+	
+	.mainTable{
+	  background:#f4a31f;
+	  height: 100%;
+	  width: 100%;
+	}
+	
+	.main{
+	  position: relative;
+	  background: white;
+	  height: 70%;
+	  width: 80%;
+	  margin: 0 auto;
+	  padding: 20px;
+	  resize: both;
+	  overflow: auto;
+	  -webkit-border-radius: 15%;
+	  -moz-border-radius: 15%;
+	  border-radius: 15%;
+	}
+
+	.main_green{
+	  position: relative;
+	  background: green;
+	  height: 70%;
+	  width: 80%;
+	  margin: 0 auto;
+	  padding: 20px;
+	  resize: both;
+	  overflow: auto;
+	  -webkit-border-radius: 15%;
+	  -moz-border-radius: 15%;
+	  border-radius: 15%;
+	}
+
+	.main_red{
+	  position: relative;
+	  background: #ef312b;
+	  height: 70%;
+	  width: 80%;
+	  margin: 0 auto;
+	  padding: 20px;
+	  resize: both;
+	  overflow: auto;
+	  -webkit-border-radius: 15%;
+	  -moz-border-radius: 15%;
+	  border-radius: 15%;
+	}
+
+	.main_app{
+	  background: #2f3135;
+	  color: white;  
+	  width: 60%;
+	  height:30%;
+	  transform: translate(-50%, -150%);
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  padding: 20px;
+	  resize: both;
+	  overflow: auto;
+	  text-align: center;
+	  vertical-align: center;
+	  -webkit-border-radius: 15%;
+	  -moz-border-radius: 15%;
+	  border-radius: 15%;
+	}
+
+	.main_value {
+	  background: grey;
+	  color: white;
+	  width: 80%;
+	  height:40%;
+	  transform: translate(-50%, -10%);
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  padding: 20px;
+	  resize: both;
+	  overflow: auto;
+	  text-align: center;
+	  vertical-align: center;
+	   -webkit-border-radius: 15%;
+	  -moz-border-radius: 15%;
+	  border-radius: 15%;
+	}
+
+	.label_app{
+	  font-size: 3vh;
+	  color: White;
+	}
+
+	.label_value{
+		font-size: 10vh;
+		color: black;
+	}
+
+	.page_header{
+	  font-size: 400%;
+	  color: #fcf75a;
+	  text-align: center;
+	}
+
+
+
+</head>

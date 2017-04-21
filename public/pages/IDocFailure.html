@@ -1,0 +1,64 @@
+<div id="wrapper">
+    <div data-ng-include="'/pages/Menu.html'"></div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid" data-ng-class="{'container-fluid-small': width < 990}">
+            <h3 class="text-center viewHeader">
+                <i class="fa fa-tags"></i>
+                Failed Idoc Status
+                <i class="fa fa-tags"></i>
+            </h3>         
+                        
+            <div class="idocfailureContainer " data-ng-show="width > 50">
+                <div class="idocfailureleft">                
+                <div class="row idocfailureHeader list-group-item-info">
+                    <h3 class="text-center idocfailureviewHeader">                
+                SAP:PR1 (Legacy)
+                </h3>
+                    <div class="col-md-4 idocfailureColWidth">IDoc Type</div>
+                    <div class="col-md-4 idocfailureColWidth">Description</div>
+                    <div class="col-md-4 idocfailureColWidth">Current Count</div>
+					<div class="col-md-4 idocfailureColWidth">Last Hour Count</div>
+                </div>
+                <div id="idocfailurePR1Marquee">
+                    <div class="row idocfailure  list-group-item animated fadeInRightBig" data-ng-repeat="item in idocfailurePR1Details">
+                        <div class="col-md-4 idocfailureColWidth">{{item.type}}</div>
+                        <div class="col-md-4 idocfailureColWidth">{{item.description}}</div>
+                        <div class="col-md-4 idocfailureColWidth" data-ng-class="{'list-group-item-success' : {{item.count}} < {{item.lastHourOpenCount}},
+                                    'list-group-item-danger' : {{item.count}} > {{item.lastHourOpenCount}}}">
+                            <i class="fa fa-arrow-up" data-ng-show="{{item.count}} > {{item.lastHourOpenCount}}"></i>
+                            <i class="fa fa-arrow-down" data-ng-show="{{item.count}} < {{item.lastHourOpenCount}}"></i>
+                            {{item.count}}
+                        </div>   
+						<div class="col-md-4 idocfailureColWidth">{{item.lastHourOpenCount}}</div>
+                    </div>
+                </div>
+                </div>
+                <div class="idocfailureright">                
+                <div class="row idocfailureHeader list-group-item-info">
+                    <h3 class="text-center idocfailureviewHeader">                
+                SAP:PRZ (Easier)
+                </h3>
+                    <div class="col-md-4 idocfailureColWidth">IDoc Type</div>
+                    <div class="col-md-4 idocfailureColWidth">Description</div>
+                    <div class="col-md-4 idocfailureColWidth">Current Count</div>
+					<div class="col-md-4 idocfailureColWidth">Last Hour Count</div>
+                </div>
+                <div id="idocfailurePRZMarquee">
+                    <div class="row idocfailure list-group-item animated fadeInRightBig" data-ng-repeat="item in idocfailurePRZDetails">
+                        <div class="col-md-4 idocfailureColWidth">{{item.type}}</div>
+                        <div class="col-md-4 idocfailureColWidth">{{item.description}}</div>
+                       <div class="col-md-4 idocfailureColWidth" data-ng-class="{'list-group-item-success' : {{item.count}} < {{item.lastHourOpenCount}},
+                                    'list-group-item-danger' : {{item.count}} > {{item.lastHourOpenCount}}}">
+                            <i class="fa fa-arrow-up" data-ng-show="{{item.count}} > {{item.lastHourOpenCount}}"></i>
+                            <i class="fa fa-arrow-down" data-ng-show="{{item.count}} < {{item.lastHourOpenCount}}"></i>
+                            {{item.count}}
+                        </div>
+						<div class="col-md-4 idocfailureColWidth">{{item.lastHourOpenCount}}</div>
+                    </div>
+                </div>              
+             </div>   
+            </div>            
+        </div>
+        <div data-ng-include="'/pages/Footer.html'"></div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div id="wrapper">
+    <div data-ng-include="'/pages/Menu.html'"></div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <h3 class="text-center viewHeader">
+                <i class="fa fa-tags"></i>
+                Replenishment Journey
+                <i class="fa fa-tags"></i>
+            </h3>
+            <div class="replenishments row alert-primary">
+                <div class="col-xs-4 col-sm-2">Source</div>
+                <div class="col-xs-4 col-sm-2"> </div>
+                <div class="col-xs-4 col-sm-2">Destination</div>
+
+                <div class="col-xs-11 col-sm-6">IDoc Failure Details</div>
+            </div>
+            <div id="ticker">
+
+
+                <div class="replenishmentContainer" >
+                    <div class="replenishments" data-ng-repeat="transaction in transactionDetailsList">
+
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-2">
+                                <div ng-class="transaction.sourceType"></div> <b>{{transaction.sourceType}}</b> {{transaction.source}}</div>
+                            <div class="arrows col-xs-4 col-sm-2"><i class="fa fa-arrow-right"></i></div>
+                            <div class="col-xs-4 col-sm-2">
+                                <div ng-class="transaction.destinationType"></div><b>{{transaction.destinationType}}</b> {{transaction.destination}}</div>
+                            <div class="col-xs-11 col-sm-6">
+                                <div class="" data-ng-repeat="idocNumber in transaction.idocNumberArray">
+                                    <a href="">{{idocNumber}}</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-ng-include="'/pages/Footer.html'"></div>
+    </div>
+</div>

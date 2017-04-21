@@ -1,0 +1,299 @@
+body
+{
+    font-family: Verdana;
+    font-size: 1.5em;
+}
+
+.footerList{
+    display: inline-block;
+}
+.mapBody{
+    width: 100%;
+    height: 85vh
+}
+
+.chart{
+    width: 100%;
+    height: 83vh  
+}
+#cover{
+        pointer-events: none;
+}
+.container-fluid{
+    padding: 0px;
+    background: transparent;
+    padding-right: 15px;
+}
+
+.container-fluid-small{
+    padding-left: 15px;
+}
+
+.col-md-4{
+    color: #111;
+    padding-top: 15px;
+}
+
+img.thumbnail{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0px;
+}
+.panel{
+    background: transparent;
+}
+.contentHolder{
+    padding:0px;
+    overflow-y:auto;
+    height:85vh;
+    padding-right: 5px;
+}
+
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+}
+
+.carousel-image{
+    padding-left: 30px;
+    padding-bottom: 20px
+}
+
+.carousel-info{
+    margin-top:100px;
+    margin-bottom:30px;
+}
+
+.incidentHeader{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding: 15px;
+    margin: 5px
+}
+
+.incidentContainer{
+    /*margin: 5px;
+    padding: 5px;*/
+    /*box-shadow: 0 1px 2px 1px rgba(0,0,0,0.3);*/
+    font-size: 1.2em;
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.incidents{
+    margin: 0px;
+}
+
+.incidents > .col-md-4 {
+    padding-top: 0px;
+    padding-right: 15px
+}
+
+.viewHeader{
+    margin-top: 18px;
+    margin-bottom:18px;
+    color: black
+}
+
+.marquees{
+    width: 100%;
+    height: 30px;
+    padding: 3px;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.3);
+}
+.marqueeStoreNames{
+    display: inline-flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: whitesmoke;
+    cursor: pointer;
+}
+.incidentContainer row{
+    padding: 0px;
+}
+
+.list-group-item-danger,.list-group-item-success{
+    padding: 5px
+}
+#incidentMarquee{
+    padding: 5px
+}
+#ticker{
+    height: 80vh;
+    overflow-y: hidden
+}
+
+.textSuccess{
+    color: #51B727;
+}
+
+.textDanger{
+    color: #D21A1A;
+}
+
+.textMIBackground{
+    color: orangered;
+    padding: 10px;
+    border-radius: 5px
+}
+
+.docLinks{
+    padding: 18px;
+    border: solid;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.5em; 
+}
+
+.docLinks:hover{
+    color:orangered;
+}
+
+.idocfailureviewHeader{
+    margin-top: 5px;
+    margin-bottom:5px;
+    color: antiquewhite;
+    background-color: cadetblue;    
+}
+
+.idocfailureContainer{
+    /*margin: 5px;
+    padding: 5px;*/
+    /*box-shadow: 0 1px 2px 1px rgba(0,0,0,0.3);*/
+    font-size: 1.05em;
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.idocfailureHeader{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding: 20px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.idocfailure{
+    margin: 4px;
+}
+
+.idocfailure > .col-md-4 {
+    padding-top: 0px;
+    padding-right: 15px
+}
+
+.idocfailureColWidth{
+   width: 25%;
+   padding: 0px;
+    margin: auto;
+	text-align:center;
+	word-break: break-all; 
+	word-wrap: break-word
+}
+
+.idocfailureleft {
+  float: left;
+  width: 49.5%;
+  overflow: hidden;
+}
+
+.idocfailureright {
+    float: right;
+  width: 49.5%;
+  overflow: hidden;
+}
+
+.red-icon a {
+    color: #fff;
+}
+.amber-icon a{
+    color: #fff;
+}
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.gm-style-iw  + div{
+    border: none;
+}

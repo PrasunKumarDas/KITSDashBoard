@@ -1,0 +1,13 @@
+{
+  "name": "MapMean",
+  "description": "Install frontend end dependencies",
+  "authors": [
+    "Roopam Das <roopamd.das@kingfisher.com>"
+  ],
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "jquery": "^2.2.0",
+    "bootstrap": "^3.3.6"
+  }
+}

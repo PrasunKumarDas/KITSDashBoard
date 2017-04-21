@@ -1,0 +1,61 @@
+<div id="wrapper">
+    <div data-ng-include="'/pages/Menu.html'"></div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <h3 class="text-center viewHeader">
+                <i class="fa fa-tags"></i>
+                Top 6 Items Revenue - Today
+                <i class="fa fa-tags"></i>
+            </h3>
+            <div class="row">
+                <div class="col-md-4 animated zoomIn" data-ng-repeat="item in itemListRevenueForLastOneHour" data-ng-class="{'col-lg-6': width >= 1400}">
+                    <h2 class="text-center">
+                        <i class="fa fa-gbp"></i> {{item.amount}}
+                    </h2>
+                    <img class="thumbnail" src="{{scenceSevenUrl}}{{item.eanCode}}_01c" />
+                    <h4 class="text-center">{{item.eanDesc}}</h4>
+                    <p class="text-center">
+                        EAN: {{item.eanCode}} / Unit Price (£): {{item.eanUnitPrice}}
+                    </p>
+                </div>
+            </div>
+            <div class="modal fade" id="itemRevenueModal" role="dialog" data-ng-hide=" width < 990 ">
+                <div class="vertical-alignment-helper">
+                    <div class="modal-dialog modal-lg vertical-align-center">
+                        <div class="modal-content">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item" data-ng-repeat="item in itemListRevenueForLastOneHour" data-ng-class="{active: {{$index}} === 0}">
+                                        <div class="row">
+                                            <h2 class="text-center animated infinite pulse" style="color:orange"> Total Revenue : <i class="fa fa-gbp"></i> {{item.amount}}</h2>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 carousel-image">
+                                                <img src="{{scenceSevenUrl}}{{item.eanCode}}_01c" height="450px" width="450px"/>
+                                            </div>
+                                            <div class="col-md-6" style="padding-left: 30px; padding-right: 20px">
+                                                <h3 class="carousel-info"><i class="fa fa-tags"></i> {{item.eanDesc}}</h3>
+                                                <h4>
+                                                    EAN: {{item.eanCode}}
+                                                </h4>
+                                                <h4>
+                                                    Unit Price (£): {{item.eanUnitPrice}}
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                </a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-ng-include="'/pages/Footer.html'"></div>
+    </div>
+</div>

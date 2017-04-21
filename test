@@ -1,0 +1,88 @@
+#Business Area -"'/g' "$f"
+#--------------
+
+sed -i -- 's/'"Home Services"'/'"Master Data, Customer \& Offer"'/g' "$f"
+sed -i -- 's/'"Supply Chain"'/'"Stock \& Supply"'/g' "$f"
+sed -i -- 's/'"Marketing \& Pricing"'/'"Store Operations"'/g' "$f"
+sed -i -- 's/'"Stores"'/'"Finance"'/g' "$f"
+sed -i -- 's/'"IA\ \&\ I"'/'"BI"'/g' "$f"
+sed -i -- 's/'"CTS"'/'"HR"'/g' "$f"
+
+
+
+#Business Capability under Business Area"'/g' "$f"
+#-----------------
+
+#Business Area Master Data, Customer & Offer
+
+sed -i -- 's/'"Service Order Management"'/'"Retail Master Data"'/g' "$f"
+sed -i -- 's/'"Customer Service Mangement"'/'"Organisation Master Data"'/g' "$f"
+sed -i -- 's/'"Vendor Management"'/'"Vendor Management"'/g' "$f"
+sed -i -- 's/'"Inventory Management"'/'"Assortment Management"'/g' "$f"
+sed -i -- 's/'"Workforce Management"'/'"Retail Planning"'/g' "$f"
+sed -i -- 's/'"Inquiry Management"'/'"Rebates"'/g' "$f"
+sed -i -- 's/'"Warranty Services"'/'"Pricing"'/g' "$f"
+sed -i -- 's/'"Forecasting"'/'"Promotions Management"'/g' "$f"
+sed -i -- 's/'"Reporting\ \&\ Analytics"'/'"Promotions Management"'/g' "$f"
+
+
+#Business Area Stock & Supply
+
+sed -i -- 's/'"Assortment Planning"'/'"Purchasing"'/g' "$f"
+sed -i -- 's/'"Logistics"'/'"Forecasting \& Replenishment"'/g' "$f"
+sed -i -- 's/'"Ordering\ \&\ Receiving"'/'"DC Supply Chain"'/g' "$f"
+
+#sed -i -- 's/'"B2B Systems"'/'"DC Supply Chain"'/g' "$f"
+#sed -i -- 's/'"Warehouse Management"'/'"DC Supply Chain"'/g' "$f"
+
+sed -i -- 's/'"Inventory Management"'/'"Direct to store deliveries"'/g' "$f"
+sed -i -- 's/'"Item Management"'/'"Customer Fulfilment"'/g' "$f"
+sed -i -- 's/'"Transportation"'/'"WMS Integration"'/g' "$f"
+
+#sed -i -- 's/'"Demand Planning"'/'"WMS Integration"'/g' "$f"
+#sed -i -- 's/'"Vendor Management"'/'"WMS Integration"'/g' "$f"
+
+#Business Area Store Operations
+
+#sed -i -- 's/'"Ad Forecasting and Modeling"'/'"POS Integration"'/g' "$f"
+#sed -i -- 's/'"Direct Store Delivery"'/'"Real time sales"'/g' "$f"
+#sed -i -- 's/'"Markdown Management"'/'"Real time stock"'/g' "$f"
+#sed -i -- 's/'"Price Optimization"'/'"Store Inventory"'/g' "$f"
+
+#Business Area Deal Management
+
+sed -i -- 's/'"Campaign Management"'/'"Store Operations"'/g' "$f"
+sed -i -- 's/'"Promotions Management"'/'"CRM"'/g' "$f"
+sed -i -- 's/'"Customer Specific Orders"'/'"Customer and Colleague "'/g' "$f"
+
+#sed -i -- 's/'"Shop Your Way Rewards"'/'"Customer and Colleague "'/g' "$f"
+
+#Business Area Finance
+
+sed -i -- 's/'"Grocery"'/'"General Ledger"'/g' "$f"
+sed -i -- 's/'"Store Operations"'/'"Accounts Payable"'/g' "$f"
+sed -i -- 's/'"Returns Management"'/'"Accounts Receivable"'/g' "$f"
+sed -i -- 's/'"Store Inventory Management"'/'"GNFR self service"'/g' "$f"
+sed -i -- 's/'"Pharmacy"'/'"Store finance"'/g' "$f"
+
+sed -i -- 's/'"Point of Sale"'/'"Invoice matching"'/g' "$f"
+sed -i -- 's/'"Store Order Management"'/'"Travel and expenses"'/g' "$f"
+sed -i -- 's/'"Workforce Management"'/'"Tax"'/g' "$f"
+sed -i -- 's/'"Asset Management"'/'"Integration with group accounts"'/g' "$f"
+#sed -i -- 's/'"Loss Prevention"'/'"Integration with group accounts"'/g' "$f"
+ 
+Business Area BI
+
+sed -i -- 's/'"Reporting Systems"'/'"Operational Reporting"'/g' "$f"
+sed -i -- 's/'"Associate Contribution Report (ACR)"'/'"Management \& Group Reporting"'/g' "$f"
+sed -i -- 's/'"Portals"'/'"F\&R Reporting"'/g' "$f"
+       
+
+Business Area HR
+
+sed -i -- 's/'"General Accounting"'/'"Core HR"'/g' "$f"
+sed -i -- 's/'"Audit\ \&\ Reconciliation"'/'"Employee self service"'/g' "$f"
+sed -i -- 's/'"Operations Support"'/'"Payroll"'/g' "$f"
+sed -i -- 's/'"HR Management"'/'"Sales Incentives"'/g' "$f"
+sed -i -- 's/'"Taxation"'/'"Succession"'/g' "$f"
+sed -i -- 's/'"Financial Management"'/'"Recruitment"'/g' "$f"

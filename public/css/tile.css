@@ -1,0 +1,85 @@
+.dynamicTile{
+    padding-left: 15px;
+    color: white;
+    font-size: 1.5em;
+}
+
+.dynamicTile  .col-lg-6.col-md-6.col-sm-4.col-xs-12{
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.dynamicTile .col-lg-3.col-md-3.col-sm-4.col-xs-6{
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+.dynamicTile .col-sm-4.col-md-3.col-lg-3.col-xs-6{
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.dynamicTile .col-sm-4.col-md-3.col-lg-3.col-xs-12{
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+.dynamicTile .col-sm-4.col-md-6.col-lg-6.col-xs-6{
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.tile{
+    height: 40vh;
+}
+#tile1{
+    background: rgb(0,93,233);
+    padding:15px;
+}
+
+#tile2{
+    background: rgb(105, 5, 156);
+    padding: 15px;
+}
+
+#tile3{
+    background: rgb(0,172,238);
+    padding:15px;
+}
+
+#tile4{
+     background: rgb(0,172,238);
+}
+
+#tile5{
+    background: rgb(175,26,63);
+    padding:15px;
+}
+
+#tile6{
+    background: rgb(209,70,37);
+    padding:15px;
+}
+
+#tile7{
+    background: rgb(0,142,0);
+    padding:15px;
+}
+
+.tilecaption{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%); 
+    margin:0!important;
+    text-align: center;
+    color:white;
+    font-family: Segoe UI;
+    font-weight: lighter;
+}
+
+.fill{width:100%;height:100%;background-position:center;background-size:cover;}

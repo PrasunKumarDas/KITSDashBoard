@@ -1,0 +1,130 @@
+<div data-ng-controller="headerController">
+    
+    <!--Dropdown menu button will appear when for smaller divices.-->
+         <div class="dropdown navbar-fixed-top" data-ng-hide="width >=1268">
+            <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+            <ul class="dropdown-menu sidebar-nav animated fadeInLeft">
+                <li class="sidebar-nav-navchild" " data-ng-class="{ 'sidebar-nav-navfocus' : isActive( '/HomeTiles')} ">
+                    <a href="#/HomeTiles ">Home</a>
+                </li>
+                <li class="sidebar-nav-navchild" " data-ng-class="{ 'sidebar-nav-navfocus' : isActive( '/StoresNotPolling')} ">
+                    <a href="#/StoresNotPolling ">Stores Not Polling</a>
+                </li>
+                <li data-ng-class="{ 'sidebar-nav-navfocus' : isActive( '/StoresWithOfflineTills')} ">
+                    <a href="#/StoresWithOfflineTills ">Stores With Offine Tills</a>
+                </li>
+                <li>
+                    <h4>Top 5 Revenue Stores <i class="fa fa-fw fa-caret-down "></i></h4>
+                </li>
+                <li>
+                    <ul>
+                        <li class="sidebar-nav-navchild " data-ng-class="{ 'sidebar-nav-navfocus' : isActive(
+                    '/StoresRevenueSinceMorning')} ">
+                            <a href="#/StoresRevenueSinceMorning ">Since Morning</a>
+                        </li>
+                        <li class="sidebar-nav-navchild " data-ng-class="{ 'sidebar-nav-navfocus' : isActive(
+                    '/StoresRevenueLastOneHour')} ">
+                            <a href="#/StoresRevenueLastOneHour ">Last One Hour</a>
+                        </li>
+                        <li class="sidebar-nav-navchild " data-ng-class="{ 'sidebar-nav-navfocus' : isActive(
+                    '/StoresRevenueLastSixMonth')} ">
+                            <a href="#/StoresRevenueLastSixMonth ">Last Six Months</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Top 6 Items <i class="fa fa-fw fa-caret-down "></i></h4>
+                </li>
+                <li>
+                    <ul>
+                        <li class="sidebar-nav-navchild " data-ng-class="{ 'sidebar-nav-navfocus' : isActive(
+                    '/ItemsRevenueLastOneHour')} ">
+                            <a href="#/ItemsRevenueLastOneHour ">Revenue</a>
+                        </li>
+                        <li class="sidebar-nav-navchild " data-ng-class="{ 'sidebar-nav-navfocus' : isActive(
+                    '/ItemsSellingLastOneHour')} ">
+                            <a href="#/ItemsSellingLastOneHour ">Selling</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--<li data-ng-class="{ 'sidebar-nav-navfocus' : isActive( '/ReplenishmentJourney')} ">
+                    <a href="#/ReplenishmentJourney ">Replenishment Journey</a> -->
+                </li>
+				<li data-ng-class="{ 'sidebar-nav-navfocus' : isActive( '/atgOrder')} ">
+                    <a href="#/atgOrder ">ATG Order Status</a>
+                </li>
+				<li data-ng-class="{ 'sidebar-nav-navfocus' : isActive( '/IDocFailure')} ">
+                    <a href="#/IDocFailure ">IDoc Status</a>
+                </li>
+				<li data-ng-class="{ 'sidebar-nav-navfocus' : isActive( '/IDocFailure')} ">
+                    <a href="#/NDO ">Next Day Orders</a>
+                </li>
+            </ul>
+        </div>
+    <!--Drop down menu details ends here-->
+    
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#/HomeTiles">
+                    <img src="/photos/Kingfisher.png" width="200px" height="62px" />
+                </a>
+            </li>
+             <li data-ng-class="{'sidebar-nav-navfocus' : isActive('/HomeTiles')}">
+                <a href="#/HomeTiles">Home</a>
+            </li>
+            <li data-ng-class="{'sidebar-nav-navfocus' : isActive('/StoresNotPolling')}">
+                <a href="#/StoresNotPolling">Stores Not Polling</a>
+            </li>
+
+            <li data-ng-class="{'sidebar-nav-navfocus' : isActive('/StoresWithOfflineTills')}">
+                <a href="#/StoresWithOfflineTills">Stores With Offine Tills</a>
+            </li>
+            <li>
+                <h4>Top 5 Revenue Stores <i class="fa fa-fw fa-caret-down"></i></h4>
+            </li>
+            <li>
+                <ul>
+                    <li class="sidebar-nav-navchild" data-ng-class="{'sidebar-nav-navfocus' : isActive('/StoresRevenueSinceMorning')}">
+                        <a href="#/StoresRevenueSinceMorning">Since Morning</a>
+                    </li>
+                    <li class="sidebar-nav-navchild" data-ng-class="{'sidebar-nav-navfocus' : isActive('/StoresRevenueLastOneHour')}">
+                        <a href="#/StoresRevenueLastOneHour">Last One Hour</a>
+                    </li>
+                    <li class="sidebar-nav-navchild" data-ng-class="{'sidebar-nav-navfocus' : isActive('/StoresRevenueLastSixMonth')}">
+                        <a href="#/StoresRevenueLastSixMonth">Last Six Months</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h4>Top 6 Items <i class="fa fa-fw fa-caret-down"></i></h4>
+            </li>
+            <li>
+                <ul>
+                    <li class="sidebar-nav-navchild" data-ng-class="{'sidebar-nav-navfocus' : isActive('/ItemsRevenueLastOneHour')}">
+                        <a href="#/ItemsRevenueLastOneHour">Revenue</a>
+                    </li>
+                    <li class="sidebar-nav-navchild" data-ng-class="{'sidebar-nav-navfocus' : isActive('/ItemsSellingLastOneHour')}">
+                        <a href="#/ItemsSellingLastOneHour">Selling</a>
+                    </li>
+                </ul>
+            </li>
+           <!-- <li data-ng-class="{'sidebar-nav-navfocus' : isActive('/ReplenishmentJourney')}">
+                <a href="#/ReplenishmentJourney">Replenishment Journey</a>
+            </li> -->
+			<li data-ng-class="{ 'sidebar-nav-navfocus' : isActive( '/atgOrder')} ">
+				<a href="#/atgOrder">ATG Order Status</a>
+			</li>
+			<li data-ng-class="{ 'sidebar-nav-navfocus' : isActive( '/IDocFailure')} ">
+                <a href="#/IDocFailure ">IDoc Status</a>
+            </li>
+			<li data-ng-class="{ 'sidebar-nav-navfocus' : isActive( '/IDocFailure')} ">
+                <a href="#/NDO ">Next Day Order</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+</div>

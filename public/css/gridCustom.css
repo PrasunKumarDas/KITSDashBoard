@@ -1,0 +1,222 @@
+.gridster ul {
+    background-color: transparent;
+  list-style-type: none;
+}
+
+.gridster li {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+}
+
+.gridster ul li ul{
+    background-color: #aaF;
+}
+
+.gridster ul li ul li{
+    padding: 0px !important;
+    background-color: #aFa;
+}
+
+.gridster {
+    margin: 0 auto;
+
+    opacity: .8;
+
+    -webkit-transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -o-transition: opacity .6s;
+    -ms-transition: opacity .6s;
+    transition: opacity .6s;
+}
+
+.gridster .gs-w {
+    background: #DDD;
+    cursor: pointer;
+}
+
+.gridster .player {
+    background: #BBB;
+}
+
+
+.gridster .preview-holder {
+    border: none!important;
+    background: red!important;
+}
+
+.blockText{
+    padding:10px;
+}
+.blanks{
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+@-webkit-keyframes new_icon {
+    0% { -webkit-transform: translate(0px, 0px) ; }
+    100% { -webkit-transform: translate(50px, 0px);  }
+}
+@-moz-keyframes new_icon {
+        0% { background-position: 0 0; }
+      100% { background-position: 0 600%; }
+}
+ .arrows{
+    animation: new_icon 1s linear 0s infinite alternate;
+    -webkit-animation: new_icon 2s linear 0s infinite alternate;
+  }
+.replenishments{
+    text-align: -webkit-center;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.3);
+    
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;
+    -ms-transition: all .6s;
+    transition: all .6s;
+    
+}
+.replenishments:hover{
+    box-shadow: 0 4px 3px 1px rgba(0,0,0,0.3);
+    
+}
+.replenishmentContainer{
+    /*width: 98%;
+    margin: 10px;*/
+   /* height: 70vh;
+    overflow-y: auto*/
+}
+.stores{
+    background: rgba(255, 144, 0, 1) !important;
+    background: transparent;
+    border: 2px solid black;
+       border-radius: 25px;
+    content: url("/photos/stores/RDC4.jpg");
+   width: 140px;
+    height: 83px;
+}
+
+.rdc{
+    background: rgba(142, 200, 0, 1) ;
+    background: transparent;
+    border: 2px solid black;
+       border-radius: 25px;
+    content: url("/photos/stores/RDC1.jpg");
+   width: 140px;
+    height: 83px;
+}
+
+
+.dc{
+    background: rgba(48, 217, 200, 1) ;
+    background: transparent;
+    border: 2px solid black;
+       border-radius: 25px;
+    content: url("/photos/stores/DC1.jpg");
+    width: 140px;
+    height: 83px;
+}
+
+.ven{
+    background: rgba(230, 48, 70, 1) ;
+    background: transparent;
+    border: 2px solid black;
+       border-radius: 25px;
+    content: url("/photos/stores/Vendor.png");
+    width: 140px;
+    height: 83px;
+}
+
+#dc1{
+    background: transparent;
+    border: 2px solid black;
+       border-radius: 25px;
+    content: url("/photos/stores/DC1.jpg");
+    width: 213px;
+    height: 137px;
+    left: -10px;
+    top: 162px;
+}
+#dc2{
+    background: transparent;
+    border: 2px solid black;
+       border-radius: 25px;
+    content: url("/photos/stores/DC2.jpg");
+    width: 213px;
+    height: 137px;
+    left: -10px;
+    top: 387px;
+}
+
+#vendor{
+    background: transparent;
+    border: 2px solid black;
+       border-radius: 25px;
+    content: url("/photos/stores/Vendor.png");
+    width: 213px;
+    height: 137px;
+    left: -179px;
+    top: 9px;
+}
+#venToDC1{
+    position: absolute;
+    left: -100px
+}
+
+#venToDC2{
+    position: absolute;
+    left: -100px
+}
+#DC1ToVen{
+    position: absolute;
+    left: -100px
+}
+#DC2ToVen{
+    position: absolute;
+    left: -100px
+}
+#rdc1{
+    background: transparent;
+    border: 2px solid black;
+       border-radius: 25px;
+    content: url("/photos/stores/RDC1.jpg");
+   width: 140px;
+    height: 83px;
+    left: 300px;
+    top: 70px;
+}
+
+#rdc2{
+    background: transparent;
+    border: 2px solid black;
+       border-radius: 25px;
+    content: url("/photos/stores/RDC2.jpg");
+   width: 140px;
+    height: 83px;
+    left: 300px;
+    top: 200px;
+}
+
+#rdc3{
+    background: transparent;
+        border: 2px solid black;
+       border-radius: 25px;
+    content:  url("/photos/stores/RDC3.jpg");
+   width: 140px;
+    height: 83px;
+    left: 300px;
+    top: 340px;
+}
+
+#rdc4{
+    background: transparent;
+    border: 2px solid black;
+       border-radius: 25px;
+    content: url("/photos/stores/RDC4.jpg");
+    width: 140px;
+    height: 83px;
+    left: 300px;
+    top: 440px;
+}

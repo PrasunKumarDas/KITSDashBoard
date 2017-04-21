@@ -1,0 +1,24 @@
+<div id="wrapper">
+    <div data-ng-include="'/pages/Menu.html'"></div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid" data-ng-class="{'container-fluid-small': width < 990}">
+            <h3 class="text-center viewHeader">
+                <i class="fa fa-tags"></i>
+                Documents Links
+                <i class="fa fa-tags"></i>
+            </h3>
+            <div class="docLinksContainer" >
+                <div data-ng-repeat="documentLink in documentLinks">
+                    <div class="row">                                                    
+                        <div class="col-xs-12 col-sm-12" href="">
+                            <a href="{{documentLink.url}}">
+                                <div class="docLinks">{{documentLink.name}}</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-ng-include="'/pages/Footer.html'"></div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<div id="wrapper">
+    <div data-ng-include="'/pages/Menu.html'"></div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid" data-ng-class="{'container-fluid-small': width < 990}">
+            <h3 class="text-center viewHeader">
+                <i class="fa fa-tags"></i>
+                Incidents - Dashboard
+                <i class="fa fa-tags"></i>
+            </h3>
+            <div class="incidentContainer" data-ng-show="width > 990">
+                <div class="row incidentHeader list-group-item-info">
+                    <div class="col-md-3">Group Name</div>
+                    <div class="col-md-2">Last Hour Open Count</div>
+                    <div class="col-md-3">Category Breakdown
+                        <div class="row incidents">
+                            <div class="col-md-4">P1</div>
+                            <div class="col-md-4">P2</div>
+                            <div class="col-md-4">P3</div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">Last To Last Hour Open Count</div>
+                    <div class="col-md-2">Yesterday Closing Count</div>
+                </div>
+                <div id="incidentMarquee">
+                    <div class="row incidents list-group-item animated fadeInRightBig" data-ng-repeat="item in incidentDetails">
+                        <div class="col-md-3">
+                            {{item.name}}
+                        </div>
+                        <div class="col-md-2" data-ng-class="{'list-group-item-success' : {{item.lastHourOpenCount}} < {{item.lastToLastHourOpenCount}},
+                                    'list-group-item-danger' : {{item.lastHourOpenCount}} > {{item.lastToLastHourOpenCount}}}">
+                            <i class="fa fa-arrow-up" data-ng-show="{{item.lastHourOpenCount}} > {{item.lastToLastHourOpenCount}}"></i>
+                            <i class="fa fa-arrow-down" data-ng-show="{{item.lastHourOpenCount}} < {{item.lastToLastHourOpenCount}}"></i>                    {{item.lastHourOpenCount}}
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row incidents">
+                                <div class="col-md-4">{{item.p1}}</div>
+                                <div class="col-md-4">{{item.p2}}</div>
+                                <div class="col-md-4">{{item.p3}}</div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">{{item.lastToLastHourOpenCount}}</div>
+                        <div class="col-md-2">{{item.openningCount}}</div>
+                        <div class="col-md-12" data-ng-show="{{item.MI !== ''}}">
+                            <p class="textMIBackground"><b>Major Incident: </b> {{item.MI}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel" data-ng-repeat="item in incidentDetails" data-ng-hide="width >= 990" data-ng-class="{'panel-success' : {{item.lastHourOpenCount}} < {{item.lastToLastHourOpenCount}},
+                                                'panel-danger' : {{item.lastHourOpenCount}} > {{item.lastToLastHourOpenCount}}}">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{item.name}}</h3>
+                </div>
+                <div class="panel-body">
+                    <p data-ng-class="{'textSuccess' : {{item.lastHourOpenCount}} < {{item.lastToLastHourOpenCount}},
+                                        'textDanger' : {{item.lastHourOpenCount}} > {{item.lastToLastHourOpenCount}}}">
+                        <b>Last Hour Open Count: </b>
+                        <i class="fa fa-arrow-up" data-ng-show="{{item.lastHourOpenCount}} > {{item.lastToLastHourOpenCount}}"></i>
+                        <i class="fa fa-arrow-down" data-ng-show="{{item.lastHourOpenCount}} < {{item.lastToLastHourOpenCount}}"></i>                {{item.lastHourOpenCount}}
+                    </p>
+                    <p>
+                        <b>P1: </b> {{item.p1}}
+                        <b>P2: </b> {{item.p2}}
+                        <b>P3: </b> {{item.p3}}
+                    </p>
+                    <p>
+                        <b>Last To Last Hour Open Count: </b> {{item.lastToLastHourOpenCount}}
+                    </p>
+                    <p>
+                        <b>Yesterday Closing Count: </b> {{item.openningCount}}
+                    </p>
+                    <p class="textMIBackground" data-ng-show="{{item.MI !== ''}}">
+                        <b>Major Incident: </b> {{item.MI}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-ng-include="'/pages/Footer.html'"></div>
+    </div>
+</div>

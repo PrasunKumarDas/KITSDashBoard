@@ -1,0 +1,56 @@
+<div id="wrapper" >
+    <div data-ng-include="'/pages/Menu.html'"></div>
+    <div id="page-content-wrapper">
+        <div >
+            <h3 class="text-center viewHeader">
+                <i class="fa fa-tags"></i>
+                Incidents - Dashboard
+                <i class="fa fa-tags"></i>
+            </h3>
+            <div class="incidentContainer" >
+                <div class="row incidentHeader list-group-item-info">
+                    <div class="col-md-3">Group Name</div>
+                    <div class="col-md-2">Last Hour Open Count</div>
+                    <div class="col-md-3">Category Breakdown
+                        <div class="row incidents">
+                            <div class="col-md-4">P1</div>
+                            <div class="col-md-4">P2</div>
+                            <div class="col-md-4">P3</div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">Last To Last Hour Open Count</div>
+                    <div class="col-md-2">Yesterday Closing Count</div>
+					<!-- <div class="col-md-2">Aged Incident Count (20+ Days)</div>
+					<div class="col-md-2">Oldest Incident Age</div> -->
+                </div>
+                <div id="incidentMarquee">
+                    <div class="row incidents list-group-item animated fadeInRightBig" data-ng-repeat="item in incidentDetails">
+                        <div class="col-md-3">
+                            {{item.groupName}}
+                        </div>
+                        <div style="text-align:center" class="col-md-2" data-ng-class="{'list-group-item-success' : {{item.totalOpenNow}} < {{item.lastHourCount}},
+                                    'list-group-item-danger' : {{item.totalOpenNow}} > {{item.lastHourCount}}}">
+                            <i class="fa fa-arrow-up" data-ng-show="{{item.totalOpenNow}} > {{item.lastHourCount}}"></i>
+                            <i class="fa fa-arrow-down" data-ng-show="{{item.totalOpenNow}} < {{item.lastHourCount}}"></i>                    {{item.totalOpenNow}}
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row incidents">
+                                <div class="col-md-4">{{item.openP1}}</div>
+                                <div class="col-md-4">{{item.openP2}}</div>
+                                <div class="col-md-4">{{item.openP3}}</div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="text-align:center">{{item.lastHourCount}}</div>
+                        <div class="col-md-2" style="text-align:center">{{item.yesterdayCloseCount}}</div>
+						<!-- <div class="col-md-2" style='background-color:{{item.agedColorCode}};'>{{item.agedIncCount}}</div>
+                        <div class="col-md-2">{{item.oldestMessageAge}}</div> -->
+                       <!--  <div class="col-md-12" data-ng-show="{{item.MI !== ''}}">
+                            <p class="textMIBackground"><b>Major Incident: </b> {{item.MI}}</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+        <div data-ng-include="'/pages/Footer.html'"></div>
+    </div>
+</div>
