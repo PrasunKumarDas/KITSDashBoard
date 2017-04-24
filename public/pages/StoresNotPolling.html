@@ -7,11 +7,7 @@
                 Stores Not Polling
                 <i class="fa fa-tags"></i>
             </h3>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="marquees" id="storesNotPollingMarquee"> <b>This data is refreshed every one hour </b> <div data-ng-repeat="storeName in storeNameArray" style="display: inline-flex" class="marqueeStoreNames" >{{storeName}}</div> </div>
-                </div>
-            </div>
+           
             <div class="row">
                 <div class="col-md-8">
                     <div id="googleMap" class="mapBody animated zoomIn"></div>
@@ -44,36 +40,41 @@
 
 <!--Modals -->
 <!-- Modal -->
-<div data-ng-repeat="till in tills">
-<div id="myModal-{{till.tillNo}}" class="modal fade" role="dialog">
+<div data-ng-repeat="till in tills" style="width:300px;">
+<div id="myModal-{{till.tillId}}" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
-    <div class="modal-content">
+    <div class="modal-content transaction-panel">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">{{till.tillNo}}</h4>
+        <h4 class="modal-title">{{till.tillId}}</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body transaction-lists">
       <table class="table table-bordered table-hover">
           
          <thead>
-        <tr>
-            <th>storeNo</th>
-            <th>storeName</th>
-            <th>latestPostTimeStamp</th>
-            <th>elapsedBy</th>
-            <th>tillStatus</th>
+        <tr class="bg-primary">
+            <th>Transaction Id</th>
+            <th>Present In Store</th>
+            <th>Present In Central</th>
+            <th>Status</th>
+            <th>Error</th>
+            <th>Reason</th>
+            <th>Date</th>
 
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>{{till.storeNo}}</td>
-            <td>{{till.storeName}}</td>
-            <td>{{till.latestPostTimeStamp}}</td>
-            <td>{{till.elapsedBy}}</td>  
-             <td>{{till.tillStatus}}</td>
+        <tr data-ng-repeat="transaction in till.transactions">
+            <td>{{transaction.trasanctionId}}</td>
+            <td>{{transaction.isInStore}}</td>
+            <td>{{transaction.isInCI}}</td>
+            <td>{{transaction.status}}</td>  
+             <td>{{transaction.error}}</td>
+             <td>{{transaction.reason}}</td>
+             <td>{{transaction.date}}</td>
+
         </tr>
         
     </tbody>

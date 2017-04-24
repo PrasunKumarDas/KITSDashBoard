@@ -8,7 +8,8 @@ TCSAMSUKApplication.service('$serviceURLS', function () {
         scenceSevenUrl: 'https://kingfisher.scene7.com/is/image/Kingfisher/',
         storeDetailsByID: '/store?id=',
         storeDetailsByIDs: '/stores?ids=',
-        storeNotPollings: 'http://10.246.73.229:8080/DashboardService/REST/Dashboard/getStoreNotPolledNew',
+       // storeNotPollings: 'http://10.246.73.229:8080/DashboardService/REST/Dashboard/getStoreNotPolledNew',
+        storeNotPollings: '/getStoreNotPolledNew',
 		nextDayOrderStats: 'http://10.1.2.197:8080/DashboardService/REST/Dashboard/getNextDayOrderStats',
         storeOfflineTills: '/storeOfflineTills',
         changeDetails: '/changeDetails',
@@ -131,8 +132,8 @@ TCSAMSUKApplication.service('$storesNotPollingService', ['$mapService', function
         var image = '/photos/red.png';
         var newCenter = new google.maps.LatLng(store['latitude'], store['longitude']);
         var str ='';
-         store['tillHeartBeatReport'].forEach(function(till){
-            str += '<a class="btn btn-success" data-toggle="modal" data-target="#myModal-'+till.tillNo+'">'+till.tillNo+'</a>&nbsp;&nbsp;&nbsp;';
+         store['tillsAffected'].forEach(function(till){
+            str += '<a class="btn btn-success" data-toggle="modal" data-target="#myModal-'+till.tillId+'">'+till.tillId+'</a>&nbsp;&nbsp;&nbsp;';
         });
 
         var contentString =
@@ -185,7 +186,7 @@ TCSAMSUKApplication.service('$tillsOfflineService', ['$mapService', function ($m
 
             }else if (data.tillsOffline[i].statusColor == 'RED') {
                  statusColorIcon = 'red-icon';
-                 offlineTills += '<span class="btn btn-danger '+statusColorIcon+'">'+data.tillsOffline[i].tillId+'</span> , ';     
+                 offlineTills += '<span class="btn btn-danger '+statusColorIcon+'">'+data.tillsOffline[i].tillId+'</span>&nbsp;&nbsp;';     
             }
              
            

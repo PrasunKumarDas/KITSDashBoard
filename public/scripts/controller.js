@@ -47,7 +47,7 @@ TCSAMSUKApplication.controller('storesNotPollingController', ['$http', '$scope',
 						$scope.storeNameArray.push(store['Store Name']);
 						$scope.storeDetailsList.push(store);
 						$storesNotPollingService.storesNotPolling(store);
-                        $scope.tills = store['tillHeartBeatReport'];
+                        $scope.tills = store['tillsAffected'];
 					}, this);
 					setTimeout(function () {
 

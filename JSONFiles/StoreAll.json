@@ -446,33 +446,54 @@
         "Till Numbers": "4",
         "latitude": "51.686901",
         "longitude": "-4.062317",
-"tillHeartBeatReport": [
-        {
-            "tillNo": "131748",
-            "storeNo": "1317",
-            "storeName": "abc",
-            "latestPostTimeStamp": "2017-04-0518: 50: 25.848",
-            "elapsedBy": "11 Minutes 21 Seconds",
-            "tillStatus": "GREEN"
-        },
-        {
-            "tillNo": "131724",
-            "storeNo": "1317",
-            "storeName": "abc",
-            "latestPostTimeStamp": "2017-04-0518: 50: 25.848",
-            "elapsedBy": "30 Minutes 21 Seconds",
-            "tillStatus": "AMBER"
-        },
-        {
-            "tillNo": "131720",
-            "storeNo": "1317",
-            "storeName": "abc",
-            "latestPostTimeStamp": "2017-04-0518: 50: 25.848",
-            "elapsedBy": "6 Hours 30 Minutes 21 Seconds",
-            "tillStatus": "RED"
-        }
-    ]
-
+        "tillsAffected": [
+            {
+                "tillId": "131724",
+                "transactions": [
+                    {
+                        "trasanctionId": "RT1317131724150417000568",
+                        "isInStore": "Y",
+                        "isInCI": "N",
+                        "status": "3",
+                        "error": "SYNC FAILED",
+                        "reason": "SYNC FAILED",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    },
+                    {
+                        "trasanctionId": "RT1317131724150417000678",
+                        "isInStore": "Y",
+                        "isInCI": "Y",
+                        "status": "3",
+                        "error": "FAILED TRANSACTION",
+                        "reason": "FAILED TRANSACTION",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    }
+                ]
+            },
+            {
+                "tillId": "131748",
+                "transactions": [
+                    {
+                        "trasanctionId": "RT1317131748150417000128",
+                        "isInStore": "Y",
+                        "isInCI": "N",
+                        "status": "3",
+                        "error": "SYNC FAILED",
+                        "reason": "SYNC FAILED",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    },
+                    {
+                        "trasanctionId": "RT1317131748150417000238",
+                        "isInStore": "Y",
+                        "isInCI": "Y",
+                        "status": "3",
+                        "error": "FAILED TRANSACTION",
+                        "reason": "FAILED TRANSACTION",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    }
+                ]
+            }
+        ]
     },
     "209": {
         "Store Number": "209",
@@ -969,33 +990,54 @@
         "Till Numbers": "9",
         "latitude": "53.845",
         "longitude": "-3.039",
-"tillHeartBeatReport": [
-        {
-            "tillNo": "131748",
-            "storeNo": "1317",
-            "storeName": "abc",
-            "latestPostTimeStamp": "2017-04-0518: 50: 25.848",
-            "elapsedBy": "11 Minutes 21 Seconds",
-            "tillStatus": "GREEN"
-        },
-        {
-            "tillNo": "131724",
-            "storeNo": "1317",
-            "storeName": "abc",
-            "latestPostTimeStamp": "2017-04-0518: 50: 25.848",
-            "elapsedBy": "30 Minutes 21 Seconds",
-            "tillStatus": "AMBER"
-        },
-        {
-            "tillNo": "131720",
-            "storeNo": "1317",
-            "storeName": "abc",
-            "latestPostTimeStamp": "2017-04-0518: 50: 25.848",
-            "elapsedBy": "6 Hours 30 Minutes 21 Seconds",
-            "tillStatus": "RED"
-        }
-    ]
-
+        "tillsAffected": [
+            {
+                "tillId": "131724",
+                "transactions": [
+                    {
+                        "trasanctionId": "RT1317131724150417000568",
+                        "isInStore": "Y",
+                        "isInCI": "N",
+                        "status": "3",
+                        "error": "SYNC FAILED",
+                        "reason": "SYNC FAILED",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    },
+                    {
+                        "trasanctionId": "RT1317131724150417000678",
+                        "isInStore": "Y",
+                        "isInCI": "Y",
+                        "status": "3",
+                        "error": "FAILED TRANSACTION",
+                        "reason": "FAILED TRANSACTION",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    }
+                ]
+            },
+            {
+                "tillId": "131748",
+                "transactions": [
+                    {
+                        "trasanctionId": "RT1317131748150417000128",
+                        "isInStore": "Y",
+                        "isInCI": "N",
+                        "status": "3",
+                        "error": "SYNC FAILED",
+                        "reason": "SYNC FAILED",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    },
+                    {
+                        "trasanctionId": "RT1317131748150417000238",
+                        "isInStore": "Y",
+                        "isInCI": "Y",
+                        "status": "3",
+                        "error": "FAILED TRANSACTION",
+                        "reason": "FAILED TRANSACTION",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    }
+                ]
+            }
+        ]
     },
     "354": {
         "Store Number": "354",
@@ -1236,32 +1278,54 @@
         "Till Numbers": "4",
         "latitude": "54.655496",
         "longitude": "-1.213076",
-"tillHeartBeatReport": [
-        {
-            "tillNo": "131748",
-            "storeNo": "1317",
-            "storeName": "abc",
-            "latestPostTimeStamp": "2017-04-0518: 50: 25.848",
-            "elapsedBy": "11 Minutes 21 Seconds",
-            "tillStatus": "GREEN"
-        },
-        {
-            "tillNo": "131724",
-            "storeNo": "1317",
-            "storeName": "abc",
-            "latestPostTimeStamp": "2017-04-0518: 50: 25.848",
-            "elapsedBy": "30 Minutes 21 Seconds",
-            "tillStatus": "AMBER"
-        },
-        {
-            "tillNo": "131720",
-            "storeNo": "1317",
-            "storeName": "abc",
-            "latestPostTimeStamp": "2017-04-0518: 50: 25.848",
-            "elapsedBy": "6 Hours 30 Minutes 21 Seconds",
-            "tillStatus": "RED"
-        }
-    ]
+        "tillsAffected": [
+            {
+                "tillId": "131724",
+                "transactions": [
+                    {
+                        "trasanctionId": "RT1317131724150417000568",
+                        "isInStore": "Y",
+                        "isInCI": "N",
+                        "status": "3",
+                        "error": "SYNC FAILED",
+                        "reason": "SYNC FAILED",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    },
+                    {
+                        "trasanctionId": "RT1317131724150417000678",
+                        "isInStore": "Y",
+                        "isInCI": "Y",
+                        "status": "3",
+                        "error": "FAILED TRANSACTION",
+                        "reason": "FAILED TRANSACTION",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    }
+                ]
+            },
+            {
+                "tillId": "131748",
+                "transactions": [
+                    {
+                        "trasanctionId": "RT1317131748150417000128",
+                        "isInStore": "Y",
+                        "isInCI": "N",
+                        "status": "3",
+                        "error": "SYNC FAILED",
+                        "reason": "SYNC FAILED",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    },
+                    {
+                        "trasanctionId": "RT1317131748150417000238",
+                        "isInStore": "Y",
+                        "isInCI": "Y",
+                        "status": "3",
+                        "error": "FAILED TRANSACTION",
+                        "reason": "FAILED TRANSACTION",
+                        "date": "Sat Apr 15 14:01:09 IST 2017"
+                    }
+                ]
+            }
+        ]
     },
     "399": {
         "Store Number": "399",

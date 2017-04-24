@@ -297,3 +297,11 @@ img.thumbnail{
 .gm-style-iw  + div{
     border: none;
 }
+.transaction-lists{
+  /*margin: 0px auto;*/
+  width: 50%;
+  font-size: 12px;
+}
+.transaction-panel{
+  width: 55%;
+}

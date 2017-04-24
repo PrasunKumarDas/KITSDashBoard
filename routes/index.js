@@ -216,6 +216,28 @@ router.get('/storeOfflineTills', function (req, res, next) {
 
 });
 
+
+/**********Modified By Prasun***********/
+router.get('/getStoreNotPolledNew', function (req, res, next) {
+   fs.readFile("JSONFiles/storeNotPulled.json", { encoding: 'utf-8' }, function (err, data) {
+        var storeList = {};
+        var storeDetailsList = [];
+
+        if (!err) {
+           
+            res.send(data);
+
+        } else {
+            console.log(err);
+        }
+    });
+
+});
+
+/***********End modified By Prasun********/
+
+
+
 router.get('/changeDetails', function(req, res, next){
     fs.readFile("changes.csv", { encoding: 'utf-8' }, function (err, data) {
        if(!err){
